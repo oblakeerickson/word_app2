@@ -1,0 +1,15 @@
+<% provide(:title, 'Add word') %>
+<h1>Add word</h1>
+
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for(@word) do |f| %>
+      <%= render '/shared/error_messages' %>
+
+      <%= f.label :word %>
+      <%= f.text_field :word %>
+
+      <%= f.submit "Add word", class: "btn btn-large btn-primary" %>
+    <% end %>
+  </div>
+</div>
